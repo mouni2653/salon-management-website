@@ -1,0 +1,843 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+.topdiv {
+    background-color: #DB7093;
+    border:2px solid white;
+    height: 40px;
+    width:100%;
+    padding:9px 10px;
+    
+}
+.admin {
+    text-decoration: none;
+    color: black;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.admin:hover {
+    color: teal;
+}
+.time {
+    font-size: 15px;
+    font-weight: 550;
+}
+.topdiv2 p,button {
+    display: inline;
+}
+.topdiv2 {
+    float:right;
+    margin-right: 30px;
+}
+.book {
+    cursor:pointer;
+    background-color: black;
+    text-align: center;
+    transition-duration: 0.4s;
+    color:white;
+    font-size: 14px;
+    font-family:sans-serif;
+    font-weight: 500;
+    border: none;
+    border-radius: 2px;
+}
+.book:hover {
+    color:gold;
+}
+.topnav {
+    text-decoration: none;
+    background:#DB7093;
+    height:80px;
+    list-style-type: none;
+    width:100%;
+    font-family: sans-serif;
+    position: sticky;
+    z-index: 1;
+    top: 0px;
+  
+}
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding:0 100px;
+    font-weight: bold;
+    font-family:sans-serif;
+}
+.topnav ul {
+    float: right;
+    margin-right: 30px;
+}
+.topnav ul li{
+    display: inline-block;
+    line-height: 55px;
+    margin: 0 5px;
+}
+.topnav ul li a {
+    color: white;
+    font-size: 17px;
+    /*text-transform:uppercase;*/
+    padding: 6px 12px;
+    border-radius:3px;
+    text-decoration: none;
+    font-weight:600;
+}
+
+
+ .topnav ul li a:hover {
+    text-decoration: underline;
+     text-decoration-color: teal;
+    transition:.5s;
+     color:teal;
+}
+.checkbtn {
+    font-size: 25px;
+    color:white;
+    float:right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display:none;
+}
+#check {
+   display: none;
+}
+
+.mySlides {display: none;}
+.slideshow-container img {vertical-align: middle;
+height: 300px;
+margin-top: 80px;
+margin-left: 7vw;
+width: 370px;
+border:2px solid white;
+}
+  #imgslide{
+    width: 38%;       
+}
+#imgslide,#main{
+    float: left;
+}
+#main{
+    padding-left: 9vw;
+}
+#main h1{
+    text-align: center;
+    color: goldenrod;
+    padding-top:80px;
+    font-size: 38px;
+}
+#main h2{
+    text-align: center;
+    color: goldenrod;
+    font-size: 30px;
+}
+#main #p1{
+    color: white;
+    font-size: 22px;
+    font-family:monospace;
+    text-align: center;
+}
+#main #p2{
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    padding-top: 20px;
+}
+   
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  background-color:black;
+  height: 450px;
+  
+}
+
+.twodots {
+    margin-top: 3px;
+    margin-left: 250px;
+}
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+/* about us*/
+#about {
+    height: 280px;
+}
+#abouth{
+    width:30%;
+}
+#aboutp{
+    width: 70%;
+    padding-left: 40px;
+    padding-top: 50px;
+    text-align: justify;
+    padding-right: 50px;
+}
+#aboutp,#abouth{
+    float: left;
+}
+#abouthead{
+    font-size: 50px;
+    padding-top:60px;
+    padding-left:3vw;
+    text-decoration: underline;
+    text-decoration-style:dotted;
+    color: palevioletred;
+}
+#aboutpara{
+    font-size: 20px;
+}
+
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+.responsiveservice {
+  padding: 0 6px;
+  float: left;
+  width: 33.33%;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#servicehead {
+    font-size: 45px;
+    text-align: center;
+    color: #DB7093;
+    margin-top: 25px;
+}
+.bookdiv {
+    text-align: center;
+    height: 340px;
+    background-image: url("images/bookbackground2.jpg");
+  background-color: #cccccc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  opacity: 1;
+}
+.bookapp {
+ background-color:darkgoldenrod;
+  border: none;
+  color: white;
+  padding: 13px 28px;
+  text-align: center;
+  font-size: 20px;
+  transition: 0.3s;
+   text-decoration: none;
+}
+.bookpara {
+    padding-top: 160px;
+    font-size: 25px;
+    color: white;
+}
+.bookapp:hover {background-color:teal}
+input#uname, input#psw{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+.cancelbtn,.login {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.admin:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+#bookcontainer {
+    width:100%;
+    height: 300px;
+    background-color:lightcyan
+}
+#bookimg{
+    width:30%;
+}
+#booktext{
+    width:70%;
+    padding-left: 100px;
+}
+#bookimg,#booktext{
+    float: left;
+}
+#bookimg img{
+    width:100%;
+    height:300px;
+    border-bottom-right-radius: 150px;
+}
+input[type=text]#fname, select, textarea,input[type=email]#email,input[type=tel],#time,#date {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+#appointment {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 50px;
+    
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+#gmap {
+    background-color: black;
+    height: 60vh;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#gmap {
+    background-color: black;
+    height: 60vh;
+}
+#map {
+    margin-left: 25px;
+}
+#contacthead {
+    margin-left: 25px;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-size: 30px;
+    color:white;
+}
+#addr,#map {
+    float:left;
+     
+}
+#addr {
+    margin-left: 150px;
+    color:white;
+}
+.contactpara {
+    font-size: 17px;
+}
+#contactbtn {
+    background-color: green;
+    border: none;
+}
+#tel {
+    color:white;
+    
+}
+#googlemap {
+    width: 50vw;
+    height: 40vh;
+}
+#gmap {
+    border-top: 2px solid white;
+}
+ .servicetable{
+  border-collapse: collapse;
+  width: 30vw;
+}
+.servicetable th, td {
+  text-align: left;
+  padding: 8px;
+}
+ .servicetable tr{
+    background-color: lightgray;
+    border: 1px solid white;
+}
+.servicetable th {
+  background-color:teal;
+  color: white;
+}
+#skin{
+    width: 50%; 
+}
+#hair{
+    width: 50%;
+    
+}
+#skin,#hair{
+    padding-left: 8vw;
+    float: left;
+    
+}
+div.gallery1 {
+  border: 2px solid palevioletred;
+}
+
+div.gallery1 img {
+  width: 100%;
+  height: 400px;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  font-size: 25px;
+  color: palevioletred;
+  font-weight: 600;
+}
+.response {
+  padding: 0 6px;
+  float: left;
+  width: 50%;
+}
+#offerhead{
+    text-align: center;
+    font-size: 35px;
+    color: goldenrod;
+}
+/* On smaller screens, decrease text size */
+@media (max-width:952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    .topnav ul li a{
+        font-size: 16px;
+    }
+    .time {
+        font-size: 13px;
+    }
+    .slideshow-container {
+        height:70vh;
+    }
+    .slideshow-container img {
+        margin-top: 50px;
+        margin-left: 40px;
+        width: 30%;
+        height: 50vh;
+    }
+    .twodots {
+    margin-top: 3px;
+    margin-left: 150px;
+    }
+   #servicehead {
+    font-size: 35px;
+    }
+    .bookapp {
+        font-size: 18px;
+    }
+    
+    #gmap {
+    background-color: black;
+    height: 80vh;
+    }
+    #addr,#map{
+        float:none;
+    }
+    #googlemap {
+        width: 80vw;
+        height: 50vh;
+        padding-left: 30px;
+    }
+    #addr {
+        margin-left: 0px;
+        padding-left: 25%;
+        background-color: black;
+    }
+    #abouthead{
+    font-size: 43px;
+    padding-top:50px;
+    padding-left:1vw;
+    text-decoration: underline;
+    text-decoration-style:dotted;
+    color: palevioletred;
+}
+    #aboutpara{
+        font-size: 18px;
+    }
+    #aboutp{
+    width: 70%;
+    padding-left: 20px;
+    padding-top: 50px;
+    text-align: justify;
+    padding-right: 30px;
+}
+#skin,#hair{
+    padding-left: 8vw;
+    float: left;
+    padding-top:10px; 
+}
+.slideshow-container{
+        height: 350px;
+    }
+    .slideshow-container img {vertical-align: middle;
+height: 250px;
+margin-top: 50px;
+margin-left: 7vw;
+width: 270px;
+}
+  #imgslide{
+    width: 38%;       
+}
+    #main{
+        padding-left: 5vw;
+    }
+#main h1{
+    
+    padding-top:50px;
+    font-size: 4vw;
+}
+#main h2{
+    font-size: 3vw;
+}
+#main #p1{
+    font-size: 20px;
+    font-family:monospace;
+    
+}
+#main #p2{
+    font-size: 2vw;
+    padding-top: 20px;
+}
+#bookimg{
+    width:30%;
+    height: 300px;
+}
+#booktext{
+    width:70%;
+    padding-left: 100px;
+}
+#bookimg,#booktext{
+    float: left;
+}
+#bookimg img{
+    width:100%;
+    height:300px;
+    border-bottom-right-radius: 150px;
+}
+}
+@media (max-width:768px){
+    .topdiv2 {
+        margin-right: 5px;
+    }
+    .time {
+        font-size: 10px;
+    }
+    .book {
+        font-size: 12px;
+    }
+    .admin {
+        font-size: 12px
+    }
+    .checkbtn {
+        display: block;
+    }
+    .topnav ul {
+        position: fixed;
+        width:100%;
+        height:100vh;
+        text-align:center;
+        top:100px;
+        left:-100%;
+        background: #8FBC8F;
+        transition:all .5s;
+        line-height: 30px;
+        padding-top: 30px;
+    }
+    .topnav ul li {
+        display: block;
+        margin: :50px 0;
+        
+    }
+    .topnav ul li a{
+        font-size: 17px;
+    }
+    .topnav ul li a:hover {
+    color:#DB7093;
+    }
+    #check:checked~ul {
+        left:0;
+    }
+    .slideshow-container img{
+        height: 50vh;
+        margin-left: 0px;
+        width: 100%;
+        margin-top: 0;
+        
+    }
+    .twodots {
+    margin-top: 0px;
+    margin-left: 50%;
+    }
+    .responsiveservice {
+    width: 100%;
+  }
+  #servicehead {
+    font-size: 25px;
+    }
+    .bookapp {
+        font-size: 15px;
+    }
+    .bookpara {
+        padding-top: 60px;
+        font-size: 20px;
+    }
+    .bookdiv {
+        height: 200px;
+    }
+    #appointment{
+    width: 100%;
+    margin-left: 0;
+    margin-top: 2px;
+    }
+    #about{
+        height:auto;
+    }
+    #abouthead{
+    padding-top: 0px;
+    font-size: 40px;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-style:dotted;
+    color: palevioletred;
+}
+    #aboutpara{
+
+        font-size: 18px;
+    }
+    #aboutp,#abouth{
+    float: none;
+}
+    #aboutp{
+    width: 100%;
+    padding-left: 20px;
+    padding-top: 0px;
+    text-align: justify;
+    padding-right: 30px;
+}
+    #abouth{
+        width: 100%;
+        
+    }
+    .servicetable{
+  border-collapse: collapse;
+  width: 100vw;
+}
+#skin{
+    width: 100%; 
+}
+#hair{
+    width: 100%;
+    padding-top: 10px;
+}
+#skin,#hair{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.slideshow-container{
+      height: 110vh;  
+    }
+.slideshow-container img {vertical-align: middle;
+height: 270px;
+margin-top: 20px;
+width: 80%;
+margin-left: 10vh;
+margin-right: 5vh;
+border:2px solid white;
+}
+  #imgslide{
+    width: 100%;       
+}
+#main{
+        padding-left: 4vw;
+    }
+#main h1{
+    color: goldenrod;
+    padding-top:0px;
+    font-size: 5vw;
+}
+#main h2{
+    display: none;
+}
+#main #p1{
+    color: white;
+    font-size: 4vw;
+    padding-top: 0px;
+    font-family:monospace;
+}
+#main #p2{
+    color: white;
+    padding-top: 0px;
+    padding-left:3vw;
+    font-size: 3vw;
+}
+    .twodots {
+       margin-left: 45vw;
+}
+    .response {
+  padding: 0 6px;
+  float: left;
+  width: 100%;
+}
+}
