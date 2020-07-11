@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="admin1.css">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            function date(){
+                date = new Date();
+                var month = date.getMonth()+1;
+                var day = date.getDate();
+                var year = date.getFullYear();
+                if (document.getElementById('date').value == ''){
+                document.getElementById('date').value = day + '-' + month + '-' + year;
+            }
+            }
+        </script>
+        <script>
+        $(document).ready(function(){
+            var i=1;
+            $(".btnadd").css("color", "green");
+            $('#add').click(function(){
+                i++;
+                $('#dynamicfield').append('<tr id="row'+i+'"><td><input type="text" name="item[]" id="item" placeholder="Enter item" class="dynamictxtbox" required></td><td><input type="text" name="price[]" id="price" placeholder="Enter price" class="dynamictxtbox" required></td></td><td><input type="button" name="remove" id="'+i+'" value="X" class="btnremove"></td></tr>');
+            });
+            $(document).on('click','.btnremove',function(){
+                var btn_id=$(this).attr("id");
+                $('#row'+btn_id+'').remove(); 
+            });    
+        });
+        </script>
+    </head>
+    <body onload="date()">
+        <div id="bill" >
+            <div id="billdiv">
+                <a href="admin.php" id="home">Home</a> 
+                <h2>Kaira Billing System</h2>
+            </div>
+            <form id="myform" action="print.php" method="post" name="myform" autocomplete="off">
+            <label  for="name">Name:</label>
+            <input class="label" type="text" id="name" name="name" placeholder="customer name" required>
+            <label for="phno">Phone number:</label>
+            <input class="label" type="tel" pattern="^\d{10}$" id="phno" placeholder="phno" name="phno" required>
+            <label for="date">Date:</label>
+            <input class="label" type="text" id="date" name="date" >
+            <label for="paidby">Paid By:</label>
+            <input class="label" type="text" id="paid" name="paid" placeholder="cash/banking" autocomplete="on"><br><br>
+            <table class="table" id="dynamicfield">
+                <tr>
+                    <th>Item Name</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="item[]" id="item" placeholder="Enter item" class="dynamictxtbox" required></td>
+                    <td><input type="text" name="price[]" id="price" placeholder="Enter price" class="dynamictxtbox" required></td>
+                    <td><input type="button" name="add" id="add" value="Add" class="btnadd"></td>
+                </tr>
+            </table><br>
+            <input type="submit" name="print" id="submit" value=" print reciept">
+            </form>
+        </div>
+    </body>
+</html>

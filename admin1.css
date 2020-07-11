@@ -1,0 +1,128 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+#welcome{
+    background-color: palevioletred;
+    height:10vh;
+    padding-top:10px;
+    text-align: center;
+}
+#welcome a,#welcome h2{
+    display: inline;
+    margin-left: 3px;
+}
+#welcome input[type=button]{
+    background-color:black
+    border:1px solid white;
+}
+.adminbook{
+    width: 100vw;
+    background-color: lightgrey;
+    height:50vh;
+}
+#bookdiv{
+    margin-left: 30%;
+    font-size: 20px;
+}
+#pbook1{
+    display: inline;
+}
+.cursor{
+    cursor: pointer;
+    
+}
+#bookhead{
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.admincontact{
+    width: 100vw;
+    background-color: lightgrey;
+    height:30vh;
+}
+.adminbill{
+    width: 100vw;
+    background-color: lightgrey;
+    height:50vh;
+}
+#bill{
+    background-color: lightgray;
+    height: 100vh;
+    padding-bottom: 10px;
+}
+#billdiv h2{
+    display: inline;
+}
+#billdiv a{
+    float: left;
+    cursor: pointer;
+    color: white;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+#myform{
+    font-size: 20px;
+    padding-top: 20px;
+    text-align: center
+}
+table {
+   padding-left: 450px;
+   font-size: 20px;
+}
+.label {
+    padding-right: 20px;
+}
+#billdiv{
+    background-color: palevioletred;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.btnremove{
+    color:red;
+}
+#submit{
+    background-color: white;
+    font-size: 15px;
+}
+#printtable tr,td{
+    text-align: center;
+    border: 1px solid black;
+}
+@media (max-width:952px){
+    #myform{
+        text-align: left;
+        padding-left: 10px;
+    }
+    table {
+   padding-left: 0px;
+}
+}
+@media (max-width:768px){
+    #bookdiv{
+    margin-left: 10px;;
+    font-size: 17px;
+    }
+    #bookhead{
+        padding-bottom: 0px;
+    }
+    .adminbook{
+        height: 60vh;
+    }
+    .admincontact{
+        height: 40vh;
+    }
+    #myform label{
+        display: block;
+    }
+    table th{
+        display: none;
+    }
+    table td{
+        display: block;
+    }
+}

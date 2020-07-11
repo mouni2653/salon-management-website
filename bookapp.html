@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kaira Salon</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script language="javascript" type="text/javascript">
+    function validation(){
+        $.ajax({
+            type:'POST',
+            url:'bookapp.php',
+            async:'false',
+            data:$('#myform').serialize(),
+            success:function(response){
+                alert(response);
+            }
+        });
+        var form=document.getElementById('myform').reset();
+        return false;
+    }
+</script>
+<script>
+    $(document).ready(function(){
+        $("#date").datepicker({
+            dateFormat: 'dd-MM-yy',
+            minDate: -0,
+            maxDate: "+3m"
+    });
+    });
+</script>
+</head>
+<body>
+    <div class=topdiv>
+        <div class="topdiv2">
+        <p class="time">EVERY DAY: 10:00AM-8:00PM / </p>
+        <a href="bookapp.html"><button class="book" type="button">Book Appointment</button></a>
+        </div>
+    </div>
+    <nav class="topnav">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+           <i class="fas fa-bars"></i>     
+        </label>
+        <label class=logo>Kaira</label>
+    <ul topnavul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="offers.html">Offers</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+    </ul>
+    </nav>
+    <div id="bookcontainer">
+        <div id="bookimg"><img src="images/bookbackground3.jpg" alt="bookappointment"></div>
+        <div id="booktext">
+        <h2>BOOK APPOINTMENT</h2>
+        <p>* Book an Appointment</p>
+        <p>* You will get a confirmation</p>
+        <p>* Be Beautified</p>
+        </div>
+    </div>
+    <div id="appointment">
+        <form id="myform" action="bookapp.php" method="post" name="myform" autocomplete="off" onsubmit="return validation();">
+          <h3 id="successh3"></h3>
+          <div class="row">
+            <div class="col-25">
+              <label for="fname"> Name:*</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="fname" name="cname" placeholder="Your name" required>
+            </div>
+          </div>
+         <div class="row">
+            <div class="col-25">
+              <label for="phone">Phone Number:*</label>
+            </div>
+              <div class="col-75">
+                <input type="tel" name="phone" id="phone_number" pattern="^\d{10}$" required="required">
+              </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="date">Date:*</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="date" name="date" placeholder="choose your date" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="time">Time:*</label>
+            </div>
+            <div class="col-75">
+                <input type="time" id="time" name="time" placeholder="choose your time" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="service">Service type:*</label>
+            </div>
+            <div class="col-75">
+              <select id="service" name="service" required>
+                <option value="">Select Service</option>
+                <option value="hair">Hair</option>
+                <option value="threading">Threading</option>
+                <option value="wax">Wax</option>
+                <option value="facial">Facial</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="details">Details:</label>
+            </div>
+            <div class="col-75">
+              <textarea id="details" name="details" placeholder="Details of service you want.." style="height:100px"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <input type="submit" name="submit" id="submit" value="Submit">
+          </div>
+        </form>
+    </div>
+</body>
+</html>

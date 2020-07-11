@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kaira Salon</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <div class=topdiv>
+        <button class="admin" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Admin</button>
+
+            <div id="id01" class="modal">
+
+              <form class="modal-content animate" action="admin.php" method="post" autocomplete="off">
+                <div class="imgcontainer">
+                  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                </div>
+
+                <div class="container">
+                  <label for="uname"><b>Username</b></label>
+                  <input type="text" id="uname" placeholder="Enter Username" name="uname" required>
+
+                  <label for="psw"><b>Password</b></label>
+                  <input type="password" id="psw" placeholder="Enter Password" name="psw" required>
+
+                  <button type="submit" class="login">Login</button>
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                </div>
+              </form>
+            </div>
+        <script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+        <div class="topdiv2">
+        <p class="time">EVERY DAY: 10:00AM-8:00PM / </p>
+            <a href="bookapp.html"><button class="book" type="button">Book Appointment</button></a>
+        </div>
+    </div>
+    <nav class="topnav">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+           <i class="fa fa-bars"></i>     
+        </label>
+        <a href="index.html"><label style=" cursor: pointer;" class=logo>Kaira</label></a>
+    <ul topnavul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="offers.html">Offers</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+    </ul>
+    </nav>
+        <div class="slideshow-container">
+            <div id="imgslide">
+            <div class="mySlides fade">
+              <img class="slideimg" src="images/home image1.jpg">
+            </div>
+            <div class="mySlides fade">
+              <img class="slideimage" src="images/home image3.jpg">
+            </div>
+            <div class="twodots">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+            </div>
+            </div>
+           <div id="main">
+                <h1>The Beauty Salon For Women</h1>
+                <p id=p1>It's time to treat yourself</p>
+               <h2>AFFORDABLE AND TRENDY</h2>
+                <p id="p2">Get offer on your first service: contact us: 9858552255,Vijayawada.</p>
+            </div> 
+        </div>
+        <h1 id=servicehead>OUR SERVICES</h1>
+        <div class="responsiveservice">
+          <div class="gallery">
+            <a target="_blank" href="services.html">
+              <img src="images/servicesimage.jpg" alt="HAIR" width="600" height="400">
+            </a>
+            <div class="desc">HAIR CARE
+            </div>
+          </div>
+        </div>
+        <div class="responsiveservice">
+          <div class="gallery">
+            <a target="_blank" href="services.html">
+              <img src="images/home image2.jpg" alt="SKIN" width="600" height="400">
+            </a>
+            <div class="desc">SKIN CARE
+            </div>
+          </div>
+        </div>
+
+        <div class="responsiveservice">
+          <div class="gallery">
+            <a target="_blank" href="services.html">
+              <img src="images/sevicesimage2.jpg" alt="MAKEUP" width="600" height="400">
+            </a>
+            <div class="desc">MAKEUP
+              </div>
+          </div>
+        </div>
+    <div class="clearfix"></div>
+    <div class="bookdiv">
+            <p class="bookpara">Book your appointment now and save ur time</p>
+            <a href="bookapp.html" style="text-decoration: none;"><button class="bookapp">Book Appointment</button></a>
+    </div>
+    <div id="about">
+        <div id="abouth">
+        <h1 id="abouthead">ABOUT US</h1></div>
+        <div id="aboutp">
+        <p id="aboutpara">Kaira,The Beauty salon for women, we believe that beauty is more than just looking good, it's about pampering your body and soul. Because when you look good, you feel good! It was established in 2019,vijayawada by an aim to give affordable service to all the women.“Our customers are vital to us, so we constantly train our stylists to guarantee that all services are of the most astounding standard and that every customer gets the best consideration”. 
+        </p></div>
+    </div>
+    <div id="gmap">
+            <div id="map">
+            <h1 id="contacthead">Contact</h1>
+            <iframe id="googlemap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61200.369377936564!2d80.61504376067366!3d16.52493210821756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35fbb064ab633d%3A0x61cc77d91c6ac80a!2sKaira%20women&#39;s%20beauty%20parlour!5e0!3m2!1sen!2sin!4v1587644272485!5m2!1sen!2sin" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" ></iframe>
+            </div>
+            <div id="addr">
+                <h1>Address</h1>
+                <button id="contactbtn"><a id="tel" href="tel:9858552255">Call us</a></button>
+                 <p class="contactpara"> tel: 9858552255</p>
+                 <p class="contactpara">59A-8-15 , Manikanta towers</p>
+                  <p class="contactpara">Funtimes club road, beside Bombay kulfi</p>
+                  <p class="contactpara"> Vijayawada, Andhra Pradesh 520008</p>
+            </div>
+    </div>
+    <script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000); // Change image every 2 seconds
+}
+</script>
+</body>
+</html>
